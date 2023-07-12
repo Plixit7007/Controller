@@ -14,6 +14,7 @@ active:Connect("Triggered", function()
     if speed == 101 then
         speed = 100
     end
+    spinny:Configure({ Ratio = speed })
 end)
 
 deactive:Connect("Triggered", function()
@@ -27,8 +28,5 @@ deactive:Connect("Triggered", function()
     if speed == 101 then
         speed = 100
     end
-end)
-
-while task.wait() do
     spinny:Configure({ Ratio = speed })
-end
+end)
